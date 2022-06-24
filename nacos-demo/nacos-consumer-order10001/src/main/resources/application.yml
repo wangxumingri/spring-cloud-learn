@@ -1,0 +1,13 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: nacos-consumer-order
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: localhost:8848
+# 消费者需要访问的，成功注册到nacos的服务提供者名称
+service-url:
+  payment-service: http://nacos-provider-payment
